@@ -343,70 +343,70 @@ template {
 
 @font-face {
   font-family: 'Gagalin-Regular';
-  src: url("/fonts/gagalin-regular-webfont.woff") format("woff");
+  src: url("./fonts/gagalin-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Gagalin-Regular';
-  src: url("/fonts/gagalin-regular-webfont.woff2") format("woff2");
+  src: url("./fonts/gagalin-regular-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lifehack-Medium';
-  src: url("/fonts/lifehack_medium-webfont.woff") format("woff");
+  src: url("./fonts/lifehack_medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lifehack-Medium';
-  src: url("/fonts/lifehack_medium-webfont.woff2") format("woff2");
+  src: url("./fonts/lifehack_medium-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/fonts/ubuntu-light-webfont.woff") format("woff");
+  src: url("./fonts/ubuntu-light-webfont.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/fonts/ubuntu-light-webfont.woff2") format("woff2");
+  src: url("./fonts/ubuntu-light-webfont.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/fonts/ubuntu-medium-webfont.woff") format("woff");
+  src: url("./fonts/ubuntu-medium-webfont.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/fonts/ubuntu-medium-webfont.woff2") format("woff2");
+  src: url("./fonts/ubuntu-medium-webfont.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/fonts/ubuntu-b-webfont.woff") format("woff");
+  src: url("./fonts/ubuntu-b-webfont.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/fonts/ubuntu-b-webfont.woff2") format("woff2");
+  src: url("./fonts/ubuntu-b-webfont.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
 }
@@ -677,6 +677,7 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 40px;
+  height: 85px;
 }
 
 .feature__title {
@@ -768,7 +769,7 @@ img {
 .review__username {
   font-family: 'Gagalin-Regular', Helvetica, sans-serif;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 2;
   font-weight: 300;
   margin-bottom: 30px;
 }
