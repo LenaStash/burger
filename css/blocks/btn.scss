@@ -1,0 +1,13 @@
+.btn {
+    display: inline-block;
+    background: $red;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 10px 15px;
+    margin-left: 15px;
+    &--ml--none {
+        margin-left: 0;
+    }
+}
