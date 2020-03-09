@@ -343,70 +343,70 @@ template {
 
 @font-face {
   font-family: 'Gagalin-Regular';
-  src: url("./fonts/gagalin-regular-webfont.woff") format("woff");
+  src: url("../fonts/gagalin-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Gagalin-Regular';
-  src: url("./fonts/gagalin-regular-webfont.woff2") format("woff2");
+  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lifehack-Medium';
-  src: url("./fonts/lifehack_medium-webfont.woff") format("woff");
+  src: url("../fonts/lifehack_medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lifehack-Medium';
-  src: url("./fonts/lifehack_medium-webfont.woff2") format("woff2");
+  src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("./fonts/ubuntu-light-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu-light-webfont.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("./fonts/ubuntu-light-webfont.woff2") format("woff2");
+  src: url("../fonts/ubuntu-light-webfont.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("./fonts/ubuntu-medium-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu-medium-webfont.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("./fonts/ubuntu-medium-webfont.woff2") format("woff2");
+  src: url("../fonts/ubuntu-medium-webfont.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("./fonts/ubuntu-b-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu-b-webfont.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("./fonts/ubuntu-b-webfont.woff2") format("woff2");
+  src: url("../fonts/ubuntu-b-webfont.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
 }
@@ -489,7 +489,7 @@ img {
 }
 
 .hero {
-  background: url("/img/bg/hero-bg.png") center center/cover no-repeat;
+  background: url("../img/bg/hero-bg.png") center center/cover no-repeat;
   color: #fff;
   position: relative;
 }
@@ -646,10 +646,13 @@ img {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  border: none;
+  background: transparent;
+  color: #fff;
 }
 
 .features {
-  background: url("/img/bg/features-bg.png") center center/cover no-repeat;
+  background: url("../img/bg/features-bg.png") center center/cover no-repeat;
 }
 
 .features__list {
