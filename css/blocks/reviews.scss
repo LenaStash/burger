@@ -1,16 +1,23 @@
 .reviews {
-    background: black;
-    height: 100vh;
-    min-height: 650px;
+    background: #000;
+    @include tablets {
+        min-height: rem(0px);
+    }
 }
 
 .reviews__list {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
 }
 
 .reviews__item {
     width: 25%;
     height: 50%;
+    position: relative;
+    @include tablets {
+        height: 25%;
+        width: 50%;
+    }
 }

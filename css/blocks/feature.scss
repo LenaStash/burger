@@ -1,19 +1,40 @@
-.feature {
-    text-align: center;
+.feature__icon-pic {
+    width: rem(100px);
+    height: rem(100px);
+    svg {
+        max-width: 95%;
+    }
+    @include phones {
+        position: static;
+        transform: none;
+    }
 }
 
 .feature__img {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-    height: 85px;
+    @include phones {
+        margin-right: rem(20px);
+        width: 30%;
+    }
+}
+
+.feature__content {
+    @include phones {
+        text-align: left;
+        display: block;
+        width: 65%;
+    }
 }
 
 .feature__title {
-    @include lifehack();
-    font-size: 24px;
+    font-size: rem(24px);
+    @include lifehack;
+    color: $black;
+    margin-bottom: rem(20px);
 }
 
 .feature__text {
-    font-size: 14px;
+    p {
+        font-size: rem(14px);
+        line-height: 1.8;
+    }
 }

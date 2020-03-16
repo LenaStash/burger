@@ -1,31 +1,41 @@
 $itemsMargin: 15px;
 .menu__list {
-    display: flex;
-    align-items: center;
+    width: 100%;
+    @extend %clearfix;
+    @include laptop {
+        text-align: center;
+    }
 }
 
 .menu__item {
-    display: flex;
-    align-items: center;
-    &::before {
-        content: "";
-        display: block;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        background: currentColor;
-        margin-left: $itemsMargin;
-    }
-    &:first-child {
-        &::before {
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    &:last-child {
+        margin-right: 0;
+        &:after {
             display: none;
         }
+    }
+    &:after {
+        content: "";
+        @include inlineblock(middle);
+        width: rem(4px);
+        height: rem(4px);
+        border-radius: 50%;
+        background: white;
+        margin: 0 rem(12px);
     }
 }
 
 .menu__link {
-    margin-left: $itemsMargin;
-    text-decoration: none;
+    @include inlineblock(middle);
+    font-size: rem(13px);
     text-transform: uppercase;
-    font-size: 13px;
+    color: white;
+    text-decoration: none;
+    @include ubuntu(medium);
+    &:hover {
+        text-decoration: underline;
+    }
 }

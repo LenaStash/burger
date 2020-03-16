@@ -1,29 +1,40 @@
+html {
+    @include laptop {
+        font-size: rem(15px);
+    }
+    @include phones {
+        font-size: rem(13px);
+    }
+}
+
 html,
 body {
     height: 100%;
 }
 
 body {
-    font-size: 16px;
+    font-size: rem(16px);
     line-height: 1.42;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     position: relative;
     @include ubuntu();
     color: $black;
 }
 
+.container {
+    margin: 0 auto;
+    position: relative;
+    max-width: rem(940px);
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+}
+
 .wrapper {
     position: relative;
     width: 100%;
-    min-width: 940px + 20px;
     min-height: 100%;
     overflow: hidden;
-}
-
-.container {
-    width: 940px;
-    margin: 0 auto;
 }
 
 // tag styles reset
@@ -62,13 +73,4 @@ footer {
 
 * {
     box-sizing: border-box;
-}
-
-a {
-    color: inherit;
-}
-
-img {
-    display: block;
-    max-width: 100%;
 }
