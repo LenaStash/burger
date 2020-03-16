@@ -508,7 +508,7 @@ footer {
 }
 
 .hero {
-  background: url("../../img/bg/hero-bg.png") center center no-repeat;
+  background: url("../img/bg/hero-bg.png") center center no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -901,7 +901,7 @@ footer {
 }
 
 .team {
-  background: url("../../img/bg/team-bg.png") 50% no-repeat;
+  background: url("../img/bg/team-bg.png") 50% no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -1354,7 +1354,7 @@ footer {
 }
 
 .catalogue {
-  background: url("../../img/bg/catalogue-bg.png") 50% no-repeat;
+  background: url("../img/bg/catalogue-bg.png") 50% no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -1447,7 +1447,7 @@ footer {
 }
 
 .order {
-  background: url("../../img/bg/order-bg.png") 50% no-repeat;
+  background: url("../img/bg/order-bg.png") 50% no-repeat;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1651,7 +1651,7 @@ footer {
 }
 
 .map {
-  background: url("../../img/content/map.png") 50% no-repeat;
+  background: url("../img/content/map.png") 50% no-repeat;
   background-size: cover;
 }
 
@@ -1718,7 +1718,7 @@ footer {
 }
 
 .footer {
-  background: url("../../img/bg/footer-bg.png") center bottom no-repeat;
+  background: url("../img/bg/footer-bg.png") center bottom no-repeat;
   background-size: cover;
   position: absolute;
   bottom: 0;
