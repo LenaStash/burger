@@ -1,116 +1,91 @@
-.team-acco {
+.team-acco__content {
+    display: flex;
+    height: 0;
+    overflow: hidden;
     @include tablets {
-        padding-bottom: rem(20px);
+        flex-direction: column;
+        align-items: center;
     }
 }
 
 .team-acco__item {
     margin-bottom: rem(40px);
-    @include tablets {
-        margin-bottom: rem(30px);
-    }
     &:last-child {
         margin-bottom: 0;
     }
-    &.active {
-        .team-acco__trigger {
-            color: $yellow;
-            &:before {
-                transform: rotate(-180deg);
-            }
+}
+
+.team-acco__item--active {
+    .team-acco__trigger {
+        color: $yellow;
+        &:before {
+            transform: rotate(180deg);
         }
+    }
+    .team-acco__content {
+        height: auto;
     }
 }
 
 .team-acco__trigger {
     color: #fff;
-    font-size: rem(14px);
-    @include gagalin;
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    position: relative;
-    display: block;
-    margin-bottom: rem(20px);
-    &:before,
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        left: rem(-18px);
-        top: rem(8px);
-        width: 0;
-        height: 0;
+    text-transform: uppercase;
+    @include gagalin;
+    font-size: rem(14px);
+    margin-bottom: rem(17px);
+    user-select: none;
+    @include tablets {
+        font-size: rem(24px);
+        justify-content: center;
     }
     &:before {
-        border-top: rem(7px) solid $yellow;
-        border-left: rem(5px) solid transparent;
-        border-right: rem(5px) solid transparent;
-        border-bottom: rem(0px) solid transparent;
-        transform: rotate(0deg);
-        transition: .3s;
-    }
-    &:after {
-        display: none;
-        border-bottom: rem(7px) solid $yellow;
-        border-left: rem(5px) solid transparent;
-        border-right: rem(5px) solid transparent;
-        border-top: rem(0px) solid transparent;
-    }
-    @include tablets {
-        display: inline-block;
-        font-size: rem(25px);
-        &:before {
-            margin-top: rem(10px);
-        }
+        content: "";
+        display: block;
+        height: 0;
+        width: 0;
+        border: 5px solid transparent;
+        border-top-color: $yellow;
+        border-bottom-width: 0px;
+        margin-right: rem(10px);
     }
 }
 
-.team-acco__content {
-    @extend %clearfix;
-    padding-top: rem(14px);
-    display: none;
-    @include tablets {
-        padding: 0 25%;
-    }
-}
-
-.team-acco__pic {
-    text-align: center;
-    width: 30%;
-    @include tablets {
-        margin-bottom: rem(15px);
-    }
-}
-
-.team-acco__img {
-    @include inlineblock();
+.team-acco__photo {
     width: rem(100px);
     height: rem(100px);
-    @include cover;
+    overflow: hidden;
     border-radius: 50%;
-}
-
-.team-acco__text {
-    width: 70%;
-}
-
-.team-acco__pic,
-.team-acco__text {
-    float: left;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: rem(25px);
     @include tablets {
-        float: none;
-        width: 100%;
+        margin-bottom: 5px;
     }
 }
 
-.team-acco__title {
-    @include ubuntu(bold);
-    font-size: rem(14px);
+.team-acco__photo-img {
+    height: auto;
+}
+
+.team-acco__text {
     color: #fff;
-    margin-bottom: rem(14px);
+    width: 50%;
+    @include tablets {
+        width: 70%;
+        text-align: center;
+    }
+}
+
+.team-acco__text-title {
+    font-weight: 700;
+    @include tablets {
+        margin-bottom: 5px;
+    }
 }
 
 .team-acco__text-content {
-    @include ubuntu(light);
-    color: #fff;
-    font-size: rem(14px);
+    font-weight: 300;
 }

@@ -1,0 +1,17 @@
+.slider-scroll__img--prev {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.slider-scroll__img--next {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}

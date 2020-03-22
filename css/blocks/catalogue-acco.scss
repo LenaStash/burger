@@ -10,8 +10,23 @@
     float: left;
     height: 100%;
     &.active {
-        .menu-acco__trigger-text {
+        .catalogue-acco__trigger-text {
             color: $yellow;
+        }
+        .catalogue-acco__content {
+            width: 550px;
+        }
+    }
+    &.additional {
+        display: none;
+        width: 100%;
+        z-index: 100;
+        .menu-acco__content {
+            display: block;
+            width: 100%;
+        }
+        @include phones {
+            display: flex;
         }
     }
 }
@@ -61,8 +76,18 @@
     padding: rem(60px) rem(30px);
     width: 100%;
     line-height: 1.8;
-    display: none;
     @include phones {
         padding: rem(25px) rem(15px);
+    }
+}
+
+.catalogue-acco__close {
+    display: none;
+    width: rem(20px);
+    position: absolute;
+    right: rem(20px);
+    top: rem(20px);
+    @include phones {
+        display: block;
     }
 }

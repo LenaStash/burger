@@ -22,6 +22,12 @@
     }
 }
 
+@mixin iphone5 {
+    @media screen and (max-width: $iphone5) {
+        @content;
+    }
+}
+
 @function rem($px) {
     @return $px / 16px+0rem;
 }

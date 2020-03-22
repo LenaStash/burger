@@ -55,6 +55,9 @@
     @include lifehack;
     text-transform: lowercase;
     line-height: 1em;
+    @include iphone5 {
+        font-size: 3.0rem;
+    }
 }
 
 .hero__image-elem {

@@ -145,6 +145,29 @@
     margin-left: rem(10px);
 }
 
+.order__radio_checkbox {
+    .order__radio-fake {
+        border-radius: rem(0px);
+    }
+    .order__radio-elem {
+        &+.order__radio-fake {
+            &:after {
+                background: transparent;
+            }
+        }
+    }
+    .order__radio-elem:checked {
+        &+.order__radio-fake {
+            &:after {
+                background: url("../../img/icons/check.png") 50% no-repeat;
+                background-size: contain;
+                width: rem(11px);
+                height: rem(9px);
+            }
+        }
+    }
+}
+
 .order__form-button {
     @include inlineblock(middle);
     margin-right: rem(20px);

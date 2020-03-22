@@ -1,8 +1,10 @@
 $orange: #e45028;
+$orange-light: #e35028;
 $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e45028;
 ///
+$iphone5: 320px;
 $phones: 480px;
 $tablets: 768px;
 $laptop: 992px;
@@ -38,3 +40,5 @@ $desktop: 1200px;
 @import "blocks/fixed-menu.scss";
 @import "blocks/footer.scss";
 @import "blocks/socials.scss";
+@import "blocks/burgers.scss";
+@import "blocks/slider.scss";

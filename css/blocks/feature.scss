@@ -1,5 +1,5 @@
 .feature__icon-pic {
-    width: rem(100px);
+    width: 90%;
     height: rem(100px);
     svg {
         max-width: 95%;
@@ -11,6 +11,7 @@
 }
 
 .feature__img {
+    padding-bottom: 35px;
     @include phones {
         margin-right: rem(20px);
         width: 30%;

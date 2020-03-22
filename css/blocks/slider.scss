@@ -1,0 +1,40 @@
+.slider__container {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.slider {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slider__list {
+    height: 100%;
+    width: 100%;
+    padding-top: 1%;
+    display: flex;
+    position: relative;
+    transition: right .4s;
+}
+
+.slider__item {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.slider-scroll__img--prev {
+    transform: rotate(90deg);
+    user-select: none;
+}
+
+.slider-scroll__img--next {
+    transform: rotate(-90deg);
+    user-select: none;
+}

@@ -17,4 +17,7 @@
     &.section__title--color--white {
         color: white;
     }
+    @include iphone5 {
+        font-size: 3.5rem;
+    }
 }
