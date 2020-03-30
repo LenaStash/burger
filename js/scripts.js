@@ -90,45 +90,166 @@ for (let i = 0; i < hamburgermenuItemLinks.length; i++) {
 
 //////////catalogue
 
-var menuAccoItems = document.querySelectorAll('.catalogue-acco__item');
-for (let i = 0; i < menuAccoItems.length; i++) {
-    menuAccoItems[i].addEventListener('click', event => {
-        event.preventDefault();
-        event.stopPropagation();
-        if (menuAccoItems[i].classList.contains('catalogue-acco__item--active')) {
-            menuAccoItems[i].classList.remove('catalogue-acco__item--active');
+const menuElementTitles = document.querySelectorAll('.catalogue-acco__trigger')
+
+menuElementTitles.forEach(element => {
+    element.addEventListener('click', (event) => {
+        event.preventDefault()
+        const menuElement = element.parentElement
+        const close = menuElement.querySelector('.catalogue-acco__close')
+
+        close.addEventListener('click', (event) => {
+            event.preventDefault()
+            menuElement.classList.remove('catalogue-acco__item--active')
+        })
+
+        if (menuElement.classList.contains('catalogue-acco__item active')) {
+            menuElement.classList.remove('catalogue-acco__item--active')
         } else {
-            for (let j = 0; j < menuAccoItems.length; j++) {
-                menuAccoItems[j].classList.remove('catalogue-acco__item--active');
+            const activeMenuElement = document.querySelector('.catalogue-acco__item--active')
+            if (activeMenuElement && !menuElement.isEqualNode(activeMenuElement)) {
+                activeMenuElement.classList.remove('catalogue-acco__item--active')
             }
-            menuAccoItems[i].classList.add('catalogue-acco__item--active');
-
-            // Удаляем все дополнительные блоки с меню
-            let additionalMenuItems = document.querySelectorAll('.catalogue-acco__item--additional');
-            for (let j = 0; j < additionalMenuItems.length; j++) additionalMenuItems[j].remove();
-
-            // Создаем дополнительный блок, содержимое копируем из выбранного элемента меню
-            let additionalMenuItem = document.createElement("div");
-            let activeMenuItem = event.target.closest(".catalogue-acco__item");
-
-            additionalMenuItem.innerHTML = activeMenuItem.innerHTML;
-            additionalMenuItem.classList.add("catalogue-acco__item", "catalogue-acco__item--additional");
-            let sectionMenu = document.querySelector(".menu");
-            sectionMenu.appendChild(additionalMenuItem);
-
-            // Добавляем обработчики для закрытия дополнительного блока
-            additionalMenuItem.addEventListener('click', event => {
-                event.preventDefault();
-                let additionalMenuItem = document.querySelector(".catalogue-acco__item--additional");
-                additionalMenuItem.remove();
-            });
-            let closePictogram = document.querySelector(".catalogue-acco__close");
-            closePictogram.addEventListener("click", event => {
-                event.preventDefault();
-                let additionalMenuItem = document.querySelector(".catalogue-acco__item--additional");
-                additionalMenuItem.remove();
-            });
-
+            menuElement.classList.add('catalogue-acco__item--active')
         }
     })
-};
+})
+
+//////////popup
+
+function reviewsPopup() {
+    const review = document.querySelector('.reviews__list');
+    const popup = document.querySelector('.popup');
+
+    popup.addEventListener('click', e => {
+        e.preventDefault();
+        if (e.target === popup) {
+            popup.classList.add('popup--closed');
+        }
+    })
+
+    review.addEventListener('click', function(e) {
+
+        const target = e.target;
+
+        if (e.target.classList.contains('review__view')) {
+            const name = target.parentNode.querySelector('.review__username').textContent;
+
+            const text = target.parentNode.querySelector('.review__content').textContent;
+
+            renderPopup(name, text)
+
+        }
+
+        function renderPopup(name, text) {
+
+            popup.classList.remove('popup--closed');
+
+            popup.querySelector('.popup__name').textContent = name;
+            popup.querySelector('.popup__text').textContent = text;
+
+            popup.querySelector('.popup__close').addEventListener('click', function(e) {
+                e.preventDefault();
+                popup.classList.add('popup--closed');
+            })
+
+        }
+
+    })
+
+}
+
+reviewsPopup();
+
+
+/////////form
+
+const myForm = document.querySelector('#order-form');
+const sendButton = document.querySelector('#send');
+const clearButton = document.querySelector('#clear');
+
+const phone = myForm.elements.phone;
+
+clearButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    let formElements = myForm.elements
+    for (element of formElements) {
+        element.value = '';
+    }
+})
+
+phone.addEventListener('keydown', function(event) {
+    let isDigit = false;
+    let isDash = false;
+    let isControl = false;
+
+    if (event.key >= 0 && event.key <= 9) {
+        isDigit = true;
+    }
+
+    if (event.key == "-") {
+        isDash = true;
+    }
+
+    if (event.key == 'Backspace' || event.key == 'ArrowRight' || event.key == 'ArrowLeft') {
+        isControl = true;
+    }
+
+    if (!isDigit && !isDash && !isControl) {
+        event.preventDefault();
+    }
+})
+
+sendButton.addEventListener('click', function(event) {
+
+    if (validateForm(myForm)) {
+        const formData = {
+            name: myForm.elements.name.value,
+            phone: myForm.elements.phone.value,
+            comment: myForm.elements.comment.value,
+            to: 'lenokstash@gmail.com'
+        };
+
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = 'json';
+        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+        xhr.send(JSON.stringify(formData));
+        xhr.addEventListener('load', () => {
+            console.log(xhr.response);
+        })
+    }
+
+    function validateForm(form) {
+        let valid = true
+
+        if (!validateField(form.elements.name)) {
+            valid = false;
+        }
+
+        if (!validateField(form.elements.phone)) {
+            valid = false;
+        }
+
+        if (!validateField(form.elements.comment)) {
+            valid = false;
+        }
+
+        if (!validateField(form.elements.street)) {
+            valid = false;
+        }
+
+        return valid;
+    }
+
+    function validateField(field) {
+        if (!field.checkValidity()) {
+            field.nextElementSibling.textContent = field.validationMessage;
+
+            return false;
+        } else {
+            field.nextElementSibling.textContent = '';
+
+            return true;
+        }
+    }
+})

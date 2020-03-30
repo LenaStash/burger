@@ -3,6 +3,7 @@ $orange-light: #e35028;
 $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e45028;
+$white: #fff;
 ///
 $iphone5: 320px;
 $phones: 480px;
@@ -42,3 +43,4 @@ $desktop: 1200px;
 @import "blocks/socials.scss";
 @import "blocks/burgers.scss";
 @import "blocks/slider.scss";
+@import "blocks/popup.scss";

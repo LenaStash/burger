@@ -9,7 +9,7 @@
 .catalogue-acco__item {
     float: left;
     height: 100%;
-    &.active {
+    &--active {
         .catalogue-acco__trigger-text {
             color: $yellow;
         }

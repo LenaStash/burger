@@ -1380,11 +1380,11 @@ footer {
   height: 100%;
 }
 
-.catalogue-acco__item.active .catalogue-acco__trigger-text {
+.catalogue-acco__item--active .catalogue-acco__trigger-text {
   color: #f9b43b;
 }
 
-.catalogue-acco__item.active .catalogue-acco__content {
+.catalogue-acco__item--active .catalogue-acco__content {
   width: 550px;
 }
 
@@ -1697,11 +1697,10 @@ footer {
 
 .order-link {
   width: 15%;
-  display: inline-block;
-  vertical-align: middle;
   padding: 0.5625rem 0;
   margin-left: 2%;
   min-width: 5.3125rem;
+  vertical-align: bottom;
 }
 
 .map {
@@ -1937,12 +1936,14 @@ footer {
 @media screen and (max-width: 768px) {
   .burger__description {
     width: 80%;
+    text-align: center;
   }
 }
 
 @media screen and (max-width: 480px) {
   .burger__description {
     width: 90%;
+    text-align: center;
   }
 }
 
@@ -1998,7 +1999,7 @@ footer {
 .burger__composition {
   color: #fff;
   border-radius: 5px;
-  background: url("../../img/icons/burger.svg") center 14px no-repeat;
+  background: url("../img/icons/burger.svg") center 14px no-repeat;
   background-color: rgba(0, 0, 0, 0);
   background-color: rgba(228, 80, 40, 0.4);
   position: absolute;
@@ -2041,7 +2042,7 @@ footer {
 
 .burger__ingredients {
   color: #ffffff;
-  font-family: Gagalin;
+  font-family: 'Gagalin-Regular', Helvetica, sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.75687rem;
@@ -2097,7 +2098,8 @@ footer {
 
 .burger__ingredients-meal {
   color: #2f3234;
-  font-family: Ubuntu;
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: 300;
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
@@ -2126,21 +2128,22 @@ footer {
   text-align: right;
   min-width: 40px;
   color: #2f3234;
-  font-family: Ubuntu;
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: 300;
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
 }
 
 .burger__calories {
-  font-family: Gagalin;
+  font-family: 'Gagalin-Regular', Helvetica, sans-serif;
   color: #fff;
   opacity: 0.5;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.875rem;
   text-transform: uppercase;
-  background: url("../../img/icons/kkal.svg") no-repeat;
+  background: url("../img/icons/kkal.svg") no-repeat;
   background-size: cover;
   position: absolute;
   bottom: 20%;
@@ -2228,4 +2231,87 @@ footer {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(47, 50, 52, 0.9);
+}
+
+.popup--closed {
+  display: none;
+}
+
+.popup__elem {
+  background-color: #fff;
+  padding: 20px;
+  width: 480px;
+  border-radius: 5px;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .popup__elem {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .popup__elem {
+    width: 80%;
+  }
+}
+
+.popup__name {
+  font-family: 'Gagalin-Regular', Helvetica, sans-serif;
+  margin-bottom: 0.9375rem;
+  text-transform: capitalize;
+}
+
+.popup__text {
+  line-height: 1.7;
+}
+
+.popup__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 25px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.popup__line:nth-child(1) {
+  position: absolute;
+  top: 33%;
+  width: 100%;
+  height: 5px;
+  background-color: red;
+  border-radius: 3px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.popup__line:nth-child(2) {
+  position: absolute;
+  top: 33%;
+  width: 100%;
+  height: 5px;
+  background-color: red;
+  border-radius: 3px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
