@@ -1,69 +1,50 @@
+.popup-template {
+    display: none;
+}
+
 .popup {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(47, 50, 52, 0.9);
+    z-index: 10000;
 }
 
-.popup--closed {
-    display: none;
-}
-
-.popup__elem {
-    background-color: $white;
-    padding: 20px;
-    width: 480px;
-    border-radius: 5px;
+.popup__container {
     position: relative;
-    @include tablets {
-        width: 50%;
-    }
+    color: #2f3234;
+}
+
+.popup__content {
+    width: 460px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: rem(24px);
+    color: #2f3234;
     @include phones {
-        width: 80%;
+        width: 250px;
     }
 }
 
-.popup__name {
-    @include gagalin();
-    margin-bottom: 0.9375rem;
-    text-transform: capitalize;
-}
-
-.popup__text {
-    line-height: 1.7;
+.popup__content--center {
+    text-align: center;
 }
 
 .popup__close {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 25px;
-    height: 22px;
-    cursor: pointer;
+    right: 15px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    // text-align     : center;
+    text-decoration: none;
 }
 
-.popup__line {
-    &:nth-child(1) {
-        position: absolute;
-        top: 33%;
-        width: 100%;
-        height: 5px;
-        background-color: red;
-        border-radius: 3px;
-        transform: rotate(45deg);
-    }
-    &:nth-child(2) {
-        position: absolute;
-        top: 33%;
-        width: 100%;
-        height: 5px;
-        background-color: red;
-        border-radius: 3px;
-        transform: rotate(-45deg);
-    }
+.popup__message {
+    margin-bottom: rem(20px);
 }

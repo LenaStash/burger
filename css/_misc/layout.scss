@@ -37,6 +37,11 @@ body {
     overflow: hidden;
 }
 
+.maincontent {
+    height: 100%;
+    transition: transform 1s;
+}
+
 // tag styles reset
 h1,
 h2,

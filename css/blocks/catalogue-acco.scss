@@ -1,4 +1,5 @@
 .catalogue-acco {
+    display: flex;
     position: absolute;
     right: 0;
     top: 0;
@@ -7,7 +8,7 @@
 }
 
 .catalogue-acco__item {
-    float: left;
+    display: flex;
     height: 100%;
     &--active {
         .catalogue-acco__trigger-text {
@@ -15,6 +16,12 @@
         }
         .catalogue-acco__content {
             width: 550px;
+            @include tablets {
+                width: 100%;
+            }
+            @include phones {
+                width: 100%;
+            }
         }
     }
     &.additional {

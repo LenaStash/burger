@@ -1,42 +1,50 @@
-.overlay {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(51, 53, 55, 0.99);
-  z-index: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+/*.popup-template {
+    display: none;
 }
 
-.modal {
-  padding: 2.3125rem 3.75rem;
-  background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
 }
 
-.modal__title {
-  line-height: 1;
-  text-align: center;
-  margin-bottom: 1.25rem;
+.popup__container {
+    position: relative;
+    color: #2f3234;
 }
+
+.popup__content {
+    width: 460px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: rem(24px);
+    color: #2f3234;
+    @include phones {
+        width: 250px;
+    }
+}
+
+.popup__content--center {
+    text-align: center;
+}
+
+.popup__close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    // text-align     : center;
+    text-decoration: none;
+}
+
+.popup__message {
+    margin-bottom: rem(20px);
+}*/

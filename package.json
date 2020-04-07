@@ -1,0 +1,27 @@
+{
+    "name": "burger",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "gulp": "gulp"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LenaStash/burger.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/LenaStash/burger/issues"
+    },
+    "homepage": "https://github.com/LenaStash/burger#readme",
+    "dependencies": {
+        "jquery": "^3.4.1"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.26.7",
+        "gulp": "^4.0.2"
+    }
+}

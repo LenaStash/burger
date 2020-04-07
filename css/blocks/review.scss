@@ -64,6 +64,10 @@
     @include phones {
         font-size: rem(20px);
     }
+    &--full {
+        color: $black;
+        font-size: rem(15px);
+    }
 }
 
 .review__content {
@@ -73,6 +77,10 @@
     margin-bottom: rem(13px);
     @include phones {
         display: none;
+    }
+    &--full {
+        display: block;
+        color: $black;
     }
 }
 
