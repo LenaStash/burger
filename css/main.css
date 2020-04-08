@@ -1737,6 +1737,10 @@ footer {
   background: transparent;
 }
 
+.order__error {
+  color: red;
+}
+
 .order-link {
   width: 15%;
   padding: 0.5625rem 0;
@@ -2466,4 +2470,52 @@ footer {
 .player__duration {
   color: #626262;
   font-weight: bold;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(51, 53, 55, 0.99);
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal {
+  padding: 2.3125rem 3.75rem;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .btn {
+  background: #365a49;
+  color: #fff;
+}
+
+.modal__title {
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 1.25rem;
 }
