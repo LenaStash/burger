@@ -18,7 +18,7 @@ deliverySubmit.addEventListener('click', e => {
 
 
         modal.toggleClsButtonVisibility();
-        modal.openOverlay("Ожитдайте ответа от сервера");
+        modal.openOverlay("Ожидайте ответа от сервера");
 
 
         xhr.addEventListener('load', () => {
