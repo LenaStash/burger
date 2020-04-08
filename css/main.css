@@ -2335,7 +2335,7 @@ footer {
 }
 
 .video {
-  background: url("../../img/bg/video-bg.png") center center/cover no-repeat;
+  background: url("./../img/bg/video-bg.png") center center/cover no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
